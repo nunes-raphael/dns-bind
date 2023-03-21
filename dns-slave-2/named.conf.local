@@ -1,0 +1,18 @@
+zone "dcing.corp" {
+    type slave;
+    file "dcing.corp.db.signed";
+    masters { 192.168.0.202; };  # ns1 private IP
+};
+
+zone "0.168.192.in-addr.arpa" {
+    type slave;
+    file "192.168.0.db";
+    masters { 192.168.0.202; };  # ns1 private IP
+};
+
+zone "docker.example" {
+	type slave;
+	file "docker.example.db.signed";
+	masters { 192.168.0.202; };  # ns1 private IP
+};
+

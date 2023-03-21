@@ -1,0 +1,14 @@
+zone "dcing.corp" {
+	type master;
+	file "dcing.corp.db.signed";
+};
+
+zone "0.168.192.in-addr.arpa" {
+	type master;
+	file "192.168.0.db";
+};
+
+zone "docker.example" {
+	type master;
+	file "docker.example.db.signed";
+};

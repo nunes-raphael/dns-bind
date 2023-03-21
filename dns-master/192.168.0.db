@@ -1,0 +1,29 @@
+$TTL	604800
+@	IN	SOA	ns1.dcing.corp. admin.dcing.corp. (
+			202205094	; Serial
+			604800          ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+;
+; name servers - NS records
+@	IN	NS	ns1.dcing.corp.
+@	IN	NS	ns2.dcing.corp.
+@	IN	NS	ns3.dcing.corp.
+
+ns1	IN	A	192.168.0.202
+ns2	IN	A	192.168.0.203
+ns3	IN	A	192.168.0.204
+
+; PTR Records
+202	IN	PTR	ns1.dcing.corp.	; 192.168.0.202
+203	IN	PTR ns2.dcing.corp.	; 192.168.0.203
+204	IN 	PTR	ns3.dcing.corp. ; 192.168.0.204
+
+; hosts
+100	IN	PTR	master.dcing.corp.
+110	IN	PTR	node01.dcing.corp.
+120	IN	PTR	node02.dcing.corp.
+200	IN	PTR	registry.dcing.corp.
+
+

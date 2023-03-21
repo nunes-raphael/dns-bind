@@ -1,0 +1,23 @@
+$TTL 604800
+@	IN	SOA	ns1.docker.example.	admin.docker.example. (
+			2022072726	; Serial
+			604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+;name servers - NS records
+	IN	NS	ns1.docker.example.
+	IN	NS	ns2.docker.example.
+	IN	NS	ns3.docker.example.
+
+; name servers - NS records
+ns1.docker.example.	IN	A	192.168.0.202
+ns2.docker.example.	IN	A	192.168.0.203
+ns3.docker.example.	IN	A	192.168.0.204
+
+; hosts
+master		IN	A 	192.168.0.10
+node01		IN	A 	192.168.0.21
+node02		IN	A 	192.168.0.22
+registry	IN	A 	192.168.0.50
